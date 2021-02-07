@@ -10,8 +10,18 @@ int main()
     Naturaleza* naturaleza_Agua = new Naturaleza("Agua", true);
     Naturaleza* naturaleza_Planta = new Naturaleza("Planta", false);
 
-    //naturaleza_Fuego->ingresarDRI();
-    
+    naturaleza_Fuego->ingresarDRI(naturaleza_Fuego->getNaturalezasDebiles(), naturaleza_Agua);
+    naturaleza_Fuego->ingresarDRI(naturaleza_Fuego->getNaturalezasInmunes(), naturaleza_Planta);
+
+    cout << naturaleza_Fuego->toString() << endl;
+    cout << naturaleza_Agua->toString() << endl;
+    cout << naturaleza_Planta->toString() << endl;
+
+    delete naturaleza_Fuego;
+    delete naturaleza_Agua;
+    delete naturaleza_Planta;
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
