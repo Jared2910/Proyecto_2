@@ -30,6 +30,9 @@
     <ClCompile Include="HabilidadCurativa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HabilidadTemporal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Naturaleza.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Library.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HabilidadTemporal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
