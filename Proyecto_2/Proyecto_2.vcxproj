@@ -150,6 +150,7 @@
     <ClInclude Include="HabilidadCurativa.h" />
     <ClInclude Include="HabilidadOfensiva.h" />
     <ClInclude Include="Library.h" />
+    <ClInclude Include="Luchador.h" />
     <ClInclude Include="Naturaleza.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
