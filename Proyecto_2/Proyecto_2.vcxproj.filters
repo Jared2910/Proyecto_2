@@ -21,9 +21,30 @@
     <ClCompile Include="Naturaleza.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Habilidad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HabilidadOfensiva.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HabilidadCurativa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Naturaleza.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Habilidad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HabilidadOfensiva.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HabilidadCurativa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

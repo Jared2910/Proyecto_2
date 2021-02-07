@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include"Library.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Naturaleza* naturaleza_Fuego = new Naturaleza("Fuego", true);
+    Naturaleza* naturaleza_Agua = new Naturaleza("Agua", true);
+    Naturaleza* naturaleza_Planta = new Naturaleza("Planta", false);
+
+    //naturaleza_Fuego->ingresarDRI();
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

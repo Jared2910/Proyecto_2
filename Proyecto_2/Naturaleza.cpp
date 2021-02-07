@@ -3,19 +3,19 @@
 Naturaleza::Naturaleza()
 {
 	this->nombre = "";
-	this->tipo = false;
+	this->tipo = 0;
 	this->naturalezasDebiles = new vector<Naturaleza*>(5);
 	this->naturalezasResistentes = new vector<Naturaleza*>(5);
 	this->naturalezasInmunes = new vector<Naturaleza*>(5);
 }
 
-Naturaleza::Naturaleza(string nombre, bool tipo, vector<Naturaleza*>* naturalezasDebiles, vector<Naturaleza*>* naturalezasResistentes, vector<Naturaleza*>* naturalezasInmunes)
+Naturaleza::Naturaleza(string nombre, bool tipo)
 {
 	this->nombre = nombre;
 	this->tipo = tipo;
-	this->naturalezasDebiles = naturalezasDebiles;
-	this->naturalezasResistentes = naturalezasResistentes;
-	this->naturalezasInmunes = naturalezasInmunes;
+	this->naturalezasDebiles = new vector<Naturaleza*>(5);
+	this->naturalezasResistentes = new vector<Naturaleza*>(5);
+	this->naturalezasInmunes = new vector<Naturaleza*>(5);
 }
 
 Naturaleza::~Naturaleza()
@@ -35,6 +35,21 @@ bool Naturaleza::getTipo() const
 	return this->tipo;
 }
 
+vector<Naturaleza*>* Naturaleza::getNaturalezasDebiles()
+{
+	return this->naturalezasDebiles;
+}
+
+vector<Naturaleza*>* Naturaleza::getNaturalezasResistentes()
+{
+	return this->naturalezasResistentes;
+}
+
+vector<Naturaleza*>* Naturaleza::getNaturalezasInmunes()
+{
+	return this->naturalezasInmunes;
+}
+
 void Naturaleza::setNombre(string nombre)
 {
 	this->nombre = nombre;
@@ -49,7 +64,7 @@ string Naturaleza::toString()
 {
 	stringstream s;
 	s << "Nombre: " << this->getNombre() << endl;
-	s << "Tipo: " << this->getTipo() << endl;
+	s << "Tipo: " << (this->getTipo()?"Fisica":"Magica") << endl;
 	s << "Naturalezas Debiles: \n";
 	if (this->naturalezasDebiles) {
 		for (int i = 0; i < this->naturalezasDebiles->size();i++) {
@@ -69,4 +84,9 @@ string Naturaleza::toString()
 		}
 	}
 	return s.str();
+}
+
+void Naturaleza::ingresarDRI(vector<Naturaleza*>*& DRI, Naturaleza* naturaleza)
+{
+	DRI->push_back(naturaleza);
 }
