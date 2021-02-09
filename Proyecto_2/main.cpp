@@ -6,20 +6,42 @@
 
 int main()
 {
+    ///
+    ///   PRUEBAS
+    /// 
+    
+    //Creacion de las Naturalezas
     Naturaleza* naturaleza_Fuego = new Naturaleza("Fuego", true);
     Naturaleza* naturaleza_Agua = new Naturaleza("Agua", true);
     Naturaleza* naturaleza_Planta = new Naturaleza("Planta", false);
 
+    //DRI = Debiles | Resistentes | Inmunes
     naturaleza_Fuego->ingresarDRI(naturaleza_Fuego->getNaturalezasDebiles(), naturaleza_Agua);
     naturaleza_Fuego->ingresarDRI(naturaleza_Fuego->getNaturalezasInmunes(), naturaleza_Planta);
 
-    cout << naturaleza_Fuego->toString() << endl;
-    cout << naturaleza_Agua->toString() << endl;
-    cout << naturaleza_Planta->toString() << endl;
+    //Creacion de las habiliadades
+    Habilidad* ascuas = new HabilidadOfensiva("Ascuas", 2, naturaleza_Fuego, 70);
+    Habilidad* lanzallamas = new HabilidadOfensiva("Lanzallamas", 5, naturaleza_Fuego, 40);
 
+    //Creacion del vector de habilidades para pasarselo a un luchador
+    vector<Habilidad*>* habilidades = new vector<Habilidad*>();
+    habilidades->push_back(ascuas);
+    habilidades->push_back(lanzallamas);
+
+    //Creacion e imprimiendo el toString de un luchador
+    Luchador* Charizard = new Luchador("Charizard", 84, 78, 109, 85, 100, habilidades, naturaleza_Fuego, 100, Clase::Mago);
+    cout << Charizard->toString();
+
+
+    //Liberacion de la memoria
     delete naturaleza_Fuego;
     delete naturaleza_Agua;
     delete naturaleza_Planta;
+
+    delete ascuas;
+    delete lanzallamas;
+
+    delete Charizard;
 
     return 0;
 }

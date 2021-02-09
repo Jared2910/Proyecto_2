@@ -142,6 +142,8 @@
     <ClCompile Include="Habilidad.cpp" />
     <ClCompile Include="HabilidadCurativa.cpp" />
     <ClCompile Include="HabilidadOfensiva.cpp" />
+    <ClCompile Include="HabilidadTemporal.cpp" />
+    <ClCompile Include="Luchador.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Naturaleza.cpp" />
   </ItemGroup>
@@ -149,6 +151,7 @@
     <ClInclude Include="Habilidad.h" />
     <ClInclude Include="HabilidadCurativa.h" />
     <ClInclude Include="HabilidadOfensiva.h" />
+    <ClInclude Include="HabilidadTemporal.h" />
     <ClInclude Include="Library.h" />
     <ClInclude Include="Luchador.h" />
     <ClInclude Include="Naturaleza.h" />
